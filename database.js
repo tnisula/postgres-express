@@ -6,7 +6,7 @@ const {Pool} = require('pg');
   const config = parse(process.env.SQL_SERVER)
 
   // Uncomment this, if you use heroku or equal to that
-  // Remove also ?sslmode=disable from env.SQL_SERVER
+  // Remove also ?sslmode=disable from SQL_SERVER in the env-file
   // config.ssl = {
     // rejectUnauthorized: false
   // }

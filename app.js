@@ -27,10 +27,6 @@ app.use(basicAuth( { authorizer: myAuthorizer, authorizeAsync:true, } ))
 app.use('/user', userRouter);
 
 function myAuthorizer(username, password,cb){
-
-    console.log("-------------");
-    console.log(username, password);
-    console.log("-------------");
     db.query('SELECT password FROM user_table WHERE username = $1',[username], 
       function(dbError, dbResults, fields) {
         if(dbError){
